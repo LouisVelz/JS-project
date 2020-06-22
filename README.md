@@ -17,7 +17,7 @@ Sliding puzzle is a puzzle game consisting on 15 squares having numbers attached
 - Vanilla Javascript
 
 ## Wireframe 
-
+![](images/wireframe.jpg)
 ## Implementation timeline
 
 - Day 1 Initial page with puzzle
