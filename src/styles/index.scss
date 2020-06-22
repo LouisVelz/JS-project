@@ -1,11 +1,25 @@
 .puzzle {
-  margin: 40px 15%;
-  height: 500px;
-  width: auto;
+  margin: 40px 10%;
+  height: 516px;
+  width: 600px;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 div[class^='square'] {
   background: #ffff00;
-  height: 125px;
-  width: 17.5%;
+  height: 127px;
+  width: 24.4%;
+  border: 1px solid black;
+  position: relative;
+  
+}
+div .square16 {
+  background-color: lightgray;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Monoton', cursive;
 }
