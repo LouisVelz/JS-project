@@ -1,0 +1,11 @@
+.puzzle {
+  margin: 40px 15%;
+  height: 500px;
+  width: auto;
+}
+
+div[class^='square'] {
+  background: #ffff00;
+  height: 125px;
+  width: 17.5%;
+}
