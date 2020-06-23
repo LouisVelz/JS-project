@@ -8,6 +8,7 @@
 }
 
 div[class^='square'] {
+  font-family: 'Monoton', cursive;
   background: #ffff00;
   height: 127px;
   width: 24.4%;
@@ -18,18 +19,13 @@ div[class^='square'] {
 div .square16 {
   background-color: lightgray;
 }
-div .squarelast {
-  background-color: lightgray;
+div .square-blank {
+  background-color: white;
+  color: white;
 
+  
 }
 
-div .square:last-child {
-
-  background-color: lightgray;
-  .text{
-    display: none;
-  }
-}
 
 
 

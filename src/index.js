@@ -1,16 +1,17 @@
 import './styles/00-reset.scss'
 import './styles/index.scss'
 
-import {addEventToDiv, shuffleChildren} from './scripts/game-logic'
+import {addEventToDiv,
+        shuffleBtn,
+        shufflePuzzle} from './scripts/game-logic'
 
 
 window.addEventListener("DOMContentLoaded", ()=>{
-  // alert("CONNECTED")
 
-    let children = document.querySelectorAll(".square");
-    // console.log(children);
 
-    shuffleChildren(children)
+    let children = document.querySelectorAll("[class^='square']");
+    shufflePuzzle(children)
+    shuffleBtn(children)
     addEventToDiv(children)
 
 })
