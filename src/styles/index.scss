@@ -18,8 +18,13 @@ div[class^='square'] {
 div .square16 {
   background-color: lightgray;
 }
+div .squarelast {
+  background-color: lightgray;
+}
 
 .text {
   position: absolute;
   font-family: 'Monoton', cursive;
+  left: 15px;
+  top: 10px
 }
