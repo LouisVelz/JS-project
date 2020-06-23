@@ -2,15 +2,17 @@
 
 
 function addEventToDiv(obj){
-  
+
   for(let i=0; i<obj.length ; i++){
 
     obj[i].addEventListener("click", (e)=>{
+
       e.stopPropagation()
       e.preventDefault()
-      console.log(typeof(e.currentTarget.value))
-      console.log(typeof(e.currentTarget.innerHTML))
-      console.log(e.target)
+      // let newNode = e.currentTarget
+      // puzzle.replaceChild(blank, newNode)
+      // puzzle.replaceChild(newNode, blank)
+      swapNodes(e.currentTarget)
       
 
     })
@@ -38,6 +40,19 @@ let shuffleBtn = (children) =>{
   })
 
 
+}
+
+let swapNodes = (node1) => {
+  let blank = document.querySelector('.square-blank')
+
+  let temp = document.createElement('div')
+  node1.parentNode.insertBefore(temp, node1)
+
+  blank.parentNode.insertBefore(node1, blank)
+
+  temp.parentNode.insertBefore(blank, temp)
+
+  temp.parentNode.removeChild(temp)
 }
 
 module.exports = {addEventToDiv,
