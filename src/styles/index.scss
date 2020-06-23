@@ -20,7 +20,18 @@ div .square16 {
 }
 div .squarelast {
   background-color: lightgray;
+
 }
+
+div .square:last-child {
+
+  background-color: lightgray;
+  .text{
+    display: none;
+  }
+}
+
+
 
 .text {
   position: absolute;

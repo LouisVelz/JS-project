@@ -5,11 +5,11 @@ import {addEventToDiv, shuffleChildren} from './scripts/game-logic'
 
 
 window.addEventListener("DOMContentLoaded", ()=>{
-  alert("CONNECTED")
-    let blank = document.querySelector(".squarelast")
+  // alert("CONNECTED")
+
     let children = document.querySelectorAll(".square");
-    console.log(children);
-    console.log(blank);
+    // console.log(children);
+
     shuffleChildren(children)
     addEventToDiv(children)
 
