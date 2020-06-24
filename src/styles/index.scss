@@ -5,16 +5,22 @@
   border: 1px solid black;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  background-image: url('./BLM.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 
 div[class^='square'] {
   font-family: 'Monoton', cursive;
-  background: #ffff00;
+  background: lightseagreen;
   height: 127px;
   width: 24.4%;
   border: 1px solid black;
   position: relative;
-  
+  color: white;
+
 }
 div .square16 {
   background-color: lightgray;
