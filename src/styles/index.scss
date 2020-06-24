@@ -14,7 +14,9 @@
 
 div[class^='square'] {
   font-family: 'Monoton', cursive;
-  background: lightseagreen;
+  font-size: x-large;
+  text-align: center;
+  background-color: black;
   height: 127px;
   width: 24.4%;
   border: 1px solid black;
@@ -33,9 +35,4 @@ div .square-blank {
 
 
 
-.text {
-  position: absolute;
-  font-family: 'Monoton', cursive;
-  left: 15px;
-  top: 10px
-}
+
