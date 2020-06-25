@@ -10,10 +10,9 @@ export const shufflePuzzle = (children) => {
 
     swapNodes(children[i], children[j])
   }
-  debugger
+
   if (!inversionCount()){
-    // let otherChildren 
-    debugger
+
     shufflePuzzle(children)
   }
 };
@@ -27,4 +26,4 @@ export const shuffleBtn = (children) => {
   });
 };
 
-// module.exports = { shuffleBtn, shufflePuzzle };
+
