@@ -6,36 +6,40 @@
   <link rel="stylesheet" href="./dist/main.css">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/1a07c677c0.js" crossorigin="anonymous"></script>
   <title>Sliding Puzzle</title>
 </head>
 <body>
-  <i class="fab fa-github" style="font-size: 48px;"></i>
-  <i class="fab fa-linkedin"></i>
+
+  <nav class="navbar">
+    <a href="https://github.com/LouisVelz"><i class="fab fa-github" style="font-size: 36px; color: white;"></i></a>
+    <a href="https://www.linkedin.com/in/louis-velazquez-bb63085a/"><i class="fab fa-linkedin" style="font-size: 36px; color: white;"></i></a>
+  </nav>
+
   <h1>Sliding Puzzle</h1>
   <br>
-  <button>Play New Game</button>
 
-  <!-- <div class="puzzle">
-    <div class="square1"><div class="text">1</div></div>
-    <div class="square2"><div class="text">2</div></div>
-    <div class="square3"><div class="text">3</div></div>
-    <div class="square4"><div class="text">4</div></div>
-    <div class="square5"><div class="text">5</div></div>
-    <div class="square6"><div class="text">6</div></div>
-    <div class="square7"><div class="text">7</div></div>
-    <div class="square8"><div class="text">8</div></div>
-    <div class="square9"><div class="text">9</div></div>
-    <div class="square10"><div class="text">10</div></div>
-    <div class="square11"><div class="text">11</div></div>
-    <div class="square12"><div class="text">12</div></div>
-    <div class="square13"><div class="text">13</div></div>
-    <div class="square14"><div class="text">14</div></div>
-    <div class="square15"><div class="text">15</div></div>
-    <div class="square16"><div class="text"></div></div>
-  </div> -->
 
   <div class="puzzle">
+    <div class="square1">1</div>
+    <div class="square2">2</div>
+    <div class="square3">3</div>
+    <div class="square4">4</div>
+    <div class="square5">5</div>
+    <div class="square6">6</div>
+    <div class="square7">7</div>
+    <div class="square8">8</div>
+    <div class="square9">9</div>
+    <div class="square10">10</div>
+    <div class="square11">11</div>
+    <div class="square12">12</div>
+    <div class="square13">13</div>
+    <div class="square14">14</div>
+    <div class="square15">15</div>
+    <div class="square-blank">16</div>
+  </div>
+
+  <!-- <div class="puzzle">
     <div class="square">1</div>
     <div class="square">2</div>
     <div class="square">3</div>
@@ -52,7 +56,7 @@
     <div class="square">14</div>
     <div class="square">15</div>
     <div class="square-blank">16</div>
-  </div>
+  </div> -->
   
   <!-- <div class="puzzle">
     <div class="square"><div class="text">1</div></div>
@@ -75,6 +79,20 @@
 
 
   <button id="shuffle-btn">Shuffle Puzzle</button>
+  
+  <div class="modal">
+    
+    
+    <div class="modal-container">
+
+      <h2>Congratulations You Won!!! Play again!!</h2>
+      <span class="modal-close js-modal-close">&times;</span>
+      <br>
+      <button class="js-modal-close"><strong>Close</strong></span>
+    </div>
+
+    <div class="modal-screen js-modal-close"></div>
+  </div>
   
   <script type="text/javascript" src="./dist/main.js"></script>
 </body>

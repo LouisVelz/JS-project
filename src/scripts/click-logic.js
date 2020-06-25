@@ -1,8 +1,9 @@
 import swapNodes from "./swap";
 import validMoves from "./valid-moves";
 import { gameOver } from "./game-won";
+import { openModal, closeModal } from "./modal";
 
-let test = (puzzle, blank) => {
+let clickLogic = (puzzle, blank) => {
   console.log(puzzle)
   puzzle.addEventListener("click", (e) => {
 
@@ -13,12 +14,12 @@ let test = (puzzle, blank) => {
     if (validMoves(e.target, blank)) {
       swapNodes(e.target, blank);
       if (gameOver()) {
-        // debugger
-        alert("You Won !!!")
+        openModal();
+        closeModal();
       }
     }
   })
 
 }
 
-export default test;
+export default clickLogic;

@@ -1,14 +1,24 @@
+.navbar{
+  height: 55px;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .puzzle {
   margin: 40px 10%;
   height: 516px;
-  width: 600px;
+  width: 844px;
   border: 1px solid black;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-image: url('./BLM.jpg');
+  background-image: url('./../../images/moon.jpg');
   background-size: contain;
   background-repeat: no-repeat;
+  position: absolute
   
 }
 
@@ -20,13 +30,12 @@ div[class^='square'] {
   height: 127px;
   width: 24.4%;
   border: 1px solid black;
-  position: relative;
+
   color: white;
 
 }
-div .square16 {
-  background-color: lightgray;
-}
+
+
 div .square-blank {
   background-color: white;
   color: white;
@@ -34,5 +43,15 @@ div .square-blank {
 
 
 
+div .square1{
+  position: relative;
+  background-image: url('./../../images/road.jpg');
+  background-position: 0px 0px;
+}
+div .square4{
+
+  background-image: url('./../../images/road.jpg');
+  background-position: -500px -500px;
+}
 
 

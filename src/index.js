@@ -1,10 +1,10 @@
 import './styles/00-reset.scss'
 import './styles/index.scss'
+import './styles/01-modal.scss'
 
-import test from './scripts/test-file'
-import addEventToDiv from './scripts/game-logic'
+import clickLogic from './scripts/click-logic'
 import { shuffleBtn, shufflePuzzle } from './scripts/suffle-logic';
-import { gameOver } from './scripts/game-won';
+
 
 
 
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     let puzzle = document.querySelector('.puzzle')
     shufflePuzzle(children)
     shuffleBtn(children)
-    test(puzzle, blank)
-    if (gameOver())alert('YOU WON, PLAY AGAIN')
+    clickLogic(puzzle, blank)
+
 
 })
