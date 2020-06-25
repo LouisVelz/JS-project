@@ -8,9 +8,7 @@ import { shuffleBtn } from "./suffle-logic"
 
   export const closeModal = () => {
     let modalButtn = document.querySelectorAll('.js-modal-close')
-    // let children = document.querySelectorAll("[class^='square']");
-    // shuffleBtn(children)
-    // debugger
+
     for (let i=0; i< modalButtn.length; i++){
       modalButtn[i].addEventListener("click", (e)=>{
         e.preventDefault()

@@ -1,6 +1,7 @@
 
 import swapNodes from './swap'
 import inversionCount from './inversions'
+import { resetValues } from './timer-moves';
 
 export const shufflePuzzle = (children) => {
 
@@ -15,6 +16,8 @@ export const shufflePuzzle = (children) => {
 
     shufflePuzzle(children)
   }
+  resetValues()
+  return true
 };
 
 

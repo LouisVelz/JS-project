@@ -12,12 +12,12 @@
 <body>
 
   <nav class="navbar">
-    <a href="https://github.com/LouisVelz"><i class="fab fa-github" style="font-size: 36px; color: white;"></i></a>
-    <a href="https://www.linkedin.com/in/louis-velazquez-bb63085a/"><i class="fab fa-linkedin" style="font-size: 36px; color: white;"></i></a>
+    <a href="https://github.com/LouisVelz"><i class="fab fa-github" ></i></a>
+    <a href="https://www.linkedin.com/in/louis-velazquez-bb63085a/"><i class="fab fa-linkedin"></i></a>
   </nav>
 
   <h1>Sliding Puzzle</h1>
-  <br>
+
 
 
   <div class="puzzle">
@@ -77,8 +77,17 @@
     <div class="square-blank"><div class="text">16</div></div>
   </div> -->
 
-
-  <button id="shuffle-btn">Shuffle Puzzle</button>
+  <div class="footer-container">
+    <button id="shuffle-btn">Shuffle Puzzle</button>
+    <div class="footer-timer">
+      <div id="timer-counter">0</div>
+      <div>Timer</div>
+    </div>
+    <div class="footer-moves">
+      <div id= 'moves-counter'>0</div>
+      <div>moves</div>
+    </div>
+  </div>
   
   <div class="modal">
     
@@ -87,8 +96,8 @@
 
       <h2>Congratulations You Won!!! Play again!!</h2>
       <span class="modal-close js-modal-close">&times;</span>
-      <br>
-      <button class="js-modal-close"><strong>Close</strong></span>
+      <!-- <br>
+      <button class="js-modal-close"><strong>Close</strong></span> -->
     </div>
 
     <div class="modal-screen js-modal-close"></div>
