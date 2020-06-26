@@ -26,6 +26,10 @@ export const shuffleBtn = (children) => {
   let suffleBtn = document.getElementById("shuffle-btn");
   suffleBtn.addEventListener("click", () => {
     shufflePuzzle(children);
+      for (let j = 0; j < children.length; j++) {
+        children[j].classList.remove('hidden')
+      }
+
   });
 };
 

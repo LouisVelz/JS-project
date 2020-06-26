@@ -26,6 +26,10 @@ h1{
 
 .hidden{
   display: none;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 
@@ -81,6 +85,7 @@ h1{
 
 .puzzle {
   margin: 40px 10%;
+
   height: 516px;
   width: 844px;
   border: 1px solid black;
@@ -90,8 +95,6 @@ h1{
   background-image: url('./../../images/moon.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-
-  
 }
 
 div[class^='square'] {
@@ -100,7 +103,7 @@ div[class^='square'] {
   text-align: center;
   background-color: #403E3E;
   height: 127px;
-  width: 24.4%;
+  width: 24.75%;
   border: 1px solid black;
 
   color: #BAB9BC;

@@ -1,10 +1,10 @@
 import { shufflePuzzle } from "./suffle-logic"
 
 export const countMoves = ()=>{
-  debugger
+  // debugger
   let counter = Number (document.getElementById("moves-counter").innerHTML)
   counter++
-  debugger
+  // debugger
   document.getElementById("moves-counter").innerHTML = String(counter)
 }
 
@@ -13,11 +13,11 @@ export const timer = () => {
   debugger
   let interval = setInterval (() =>{
     let time = Number(document.getElementById("timer-counter"))
-    debugger
+    // debugger
     document.getElementById("timer-counter").innerHTML = time++
   }, 1000)
   if (shufflePuzzle){
-    debugger
+    // debugger
     clearInterval(interval)
   }
 }

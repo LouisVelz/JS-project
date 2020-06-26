@@ -15,7 +15,7 @@ let clickLogic = (puzzle, blank) => {
     if (validMoves(e.target, blank)) {
       swapNodes(e.target, blank);
       countMoves()
-      if (gameOver()) {
+      if (!gameOver()) {
         openModal();
         closeModal();
       }

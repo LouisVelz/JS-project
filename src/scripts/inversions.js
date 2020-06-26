@@ -1,3 +1,7 @@
+import { mergeSort } from "./merge-sort-inversions";
+
+
+
 const inversionCount = () => {
   let puzzle = document.querySelectorAll("[class^='square']");
   let arr =  []
@@ -10,16 +14,8 @@ const inversionCount = () => {
   indexOfBlank = arr.indexOf(16)
   arr.splice(indexOfBlank, 1)
 
-
-  for (let i=0; i<arr.length - 1 ; i++){
-    for (let j=i+1; j<arr.length; j++){
-
-
-      if (arr[i] > arr[j]){
-        inversions++
-      }
-    }
-  }
+  inversions += mergeSort({arr, count: 0}).count
+ 
 
   if ((inversions % 2 === 0) && (indexOfBlank > 11 || (indexOfBlank > 3 && indexOfBlank < 8) )){
 
