@@ -1,4 +1,4 @@
-import { shufflePuzzle } from "./suffle-logic"
+
 
 export const countMoves = ()=>{
   // debugger
@@ -8,20 +8,29 @@ export const countMoves = ()=>{
   document.getElementById("moves-counter").innerHTML = String(counter)
 }
 
-export const timer = () => {
-   
+let timerInterval = null
+
+export const startTimer = () => {
+  // stop(timerInterval)
+  stop()
+  timerInterval = window.setInterval(updateValue, 1000)
+}
+
+export const stop = () => {
+  clearInterval(timerInterval)
+
+}
+
+let updateValue = () =>{
   debugger
-  let interval = setInterval (() =>{
-    let time = Number(document.getElementById("timer-counter"))
-    // debugger
-    document.getElementById("timer-counter").innerHTML = time++
-  }, 1000)
-  if (shufflePuzzle){
-    // debugger
-    clearInterval(interval)
-  }
+  // let time = Number(document.getElementById('timer-counter').innerHTML)
+  document.getElementById("timer-counter").innerHTML = Number(document.getElementById("timer-counter").innerHTML) + 1
 }
 
 export const resetValues = () => {
   document.getElementById("moves-counter").innerHTML = 0
+    document.getElementById("timer-counter").innerHTML = 0
 }
+
+
+

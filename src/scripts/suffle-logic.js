@@ -1,7 +1,9 @@
 
 import swapNodes from './swap'
 import inversionCount from './inversions'
-import { resetValues } from './timer-moves';
+import { resetValues, startTimer } from './timer-moves';
+
+
 
 export const shufflePuzzle = (children) => {
 
@@ -17,6 +19,7 @@ export const shufflePuzzle = (children) => {
     shufflePuzzle(children)
   }
   resetValues()
+  startTimer()
   return true
 };
 

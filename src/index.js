@@ -4,8 +4,6 @@ import './styles/01-modal.scss'
 
 import clickLogic from './scripts/click-logic'
 import { shuffleBtn, shufflePuzzle } from './scripts/suffle-logic';
-import { timer } from './scripts/timer-moves';
-import { gameOver } from './scripts/game-won';
 import { play_pause } from './scripts/audio-file';
 
 
@@ -20,6 +18,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     shuffleBtn(children)
     clickLogic(puzzle, blank)
     play_pause()
+
 
 
 

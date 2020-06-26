@@ -2,7 +2,7 @@ import swapNodes from "./swap";
 import validMoves from "./valid-moves";
 import { gameOver } from "./game-won";
 import { openModal, closeModal } from "./modal";
-import { countMoves } from "./timer-moves";
+import { countMoves, stop } from "./timer-moves";
 
 let clickLogic = (puzzle, blank) => {
   console.log(puzzle)
@@ -15,9 +15,10 @@ let clickLogic = (puzzle, blank) => {
     if (validMoves(e.target, blank)) {
       swapNodes(e.target, blank);
       countMoves()
-      if (!gameOver()) {
+      if (gameOver()) {
         openModal();
         closeModal();
+        stop()
       }
     }
   })

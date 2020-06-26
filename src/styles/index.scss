@@ -29,10 +29,7 @@ h1{
 
 .hidden{
   display: none;
-  animation: rotator 1.4s linear infinite;
-  -webkit-animation: rotator 1.4s infinite linear;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-
+	transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
 }
 
 
