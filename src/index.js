@@ -6,6 +6,7 @@ import clickLogic from './scripts/click-logic'
 import { shuffleBtn, shufflePuzzle } from './scripts/suffle-logic';
 import { timer } from './scripts/timer-moves';
 import { gameOver } from './scripts/game-won';
+import { play_pause } from './scripts/audio-file';
 
 
 
@@ -14,12 +15,12 @@ window.addEventListener("DOMContentLoaded", ()=>{
     let children = document.querySelectorAll("[class^='square']");
     let blank = document.querySelector(".square-blank");
     let puzzle = document.querySelector('.puzzle')
+    
     shufflePuzzle(children)
     shuffleBtn(children)
     clickLogic(puzzle, blank)
-    // while(!gameOver()){
-    //   timer()
-    // }
+    play_pause()
+
 
 
 })

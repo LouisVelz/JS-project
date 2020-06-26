@@ -14,22 +14,25 @@ h1{
   text-shadow: 3px 3px #403E3E;
 }
 
-.fab {
+.fab{
+  font-size: 36px; 
+  color: #BAB9BC;
+}
+.fas{
   font-size: 36px; 
   color: #BAB9BC;
 }
 .fab:hover {
-  
   color: #526889;
     transition: all .5s ease;
 }
 
 .hidden{
   display: none;
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
+  animation: rotator 1.4s linear infinite;
+  -webkit-animation: rotator 1.4s infinite linear;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+
 }
 
 
@@ -39,7 +42,7 @@ h1{
   display: flex;
   background-color: #403E3E;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 .footer-container{
   display: flex;
