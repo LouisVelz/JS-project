@@ -1,4 +1,3 @@
-import { shuffleBtn } from "./suffle-logic"
 
 
   export const openModal = () => {
@@ -19,21 +18,12 @@ import { shuffleBtn } from "./suffle-logic"
 
         for(let j=0; j< square.length; j++){
           window.setTimeout(function () {
-            // elem.classList.remove('is-visible');
+
             square[j].classList.add('hidden')
-          }, 2000)
-          // removeElement(square[j])
+  
+          }, 500)
         }
       })
 
     }
   }
-function removeElement(target) {
-  target.animate({
-    opacity: '-=1'
-  }, 1000, function () {
-    target.remove();
-  });
-}
-
-
