@@ -1,72 +1,70 @@
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #876E5A;
+  background-color: #876e5a;
 }
 
-h1{
+h1 {
   font-size: 48px;
   margin-top: 40px;
-  color: #BAB9BC;
+  color: #bab9bc;
   font-weight: 700;
-  text-shadow: 3px 3px #403E3E;
+  text-shadow: 3px 3px #403e3e;
 }
 
-.fab{
-  font-size: 36px; 
-  color: #BAB9BC;
+.fab {
+  font-size: 36px;
+  color: #bab9bc;
 }
-.fas{
-  font-size: 36px; 
-  color: #BAB9BC;
+.fas {
+  font-size: 36px;
+  color: #bab9bc;
 }
 .fab:hover {
   color: #526889;
-    transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
-.hidden{
+.hidden {
   display: none;
-	transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
+  transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
 }
 
-
-.navbar{
+.navbar {
   height: 55px;
   width: 100%;
   display: flex;
-  background-color: #403E3E;
+  background-color: #403e3e;
   align-items: center;
   justify-content: space-evenly;
 }
-.footer-container{
+.footer-container {
   display: flex;
   width: 524px;
   height: 100px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: #403E3E;
+  background-color: #403e3e;
   color: white;
   align-items: center;
   justify-content: space-evenly;
 }
-.footer-container div{
+.footer-container div {
   color: white;
 }
-.footer-container button{
+.footer-container button {
   color: white;
-  background-color: #757C85;
+  background-color: #757c85;
   width: 150px;
   height: 45px;
   border-radius: 5px;
   text-align: center;
 }
-.footer-container button:hover{
+.footer-container button:hover {
   background-color: #526889;
-  transition: all .5s ease;
-
+  transition: all 0.5s ease;
 }
 
 .footer-container .footer-moves {
@@ -75,13 +73,12 @@ h1{
   flex-direction: column;
   align-items: center;
 }
-.footer-container .footer-timer{
+.footer-container .footer-timer {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 
 .puzzle {
   margin: 40px 10%;
@@ -92,38 +89,98 @@ h1{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-image: url('./../../images/hawaii.jpg');
+  background-image: url("./../../images/hawaii.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-div[class^='square'] {
-  font-family: 'Monoton', cursive;
+div[class^="square"] {
+  font-family: "Monoton", cursive;
   font-size: x-large;
   text-align: center;
-  background-color: #403E3E;
-  height: 127px;
-  width: 24.75%;
-  border: 1px solid black;
+  cursor: pointer;
+  height: 129px;
+  width: 25%;
 
-  color: #BAB9BC;
-
+  color: white;
 }
-div[class^='square']:hover:not(.square-blank) {
-  background-color: #526889;
-    transition: all .5s ease;
-}
-
 
 div .square-blank {
-  background-color: #BAB9BC;
-  color:  #BAB9BC;
+  background-color: #403e3e;
+  color: #bab9bc;
 }
 
+.square1 {
+  background: url("./../../images/hawaii.jpg");
+}
+.square2 {
+  background: url("./../../images/hawaii.jpg") -210.5px 0px;
+}
+.square3 {
+  background: url("./../../images/hawaii.jpg") -421px 0px;
+}
+.square4 {
+  background: url("./../../images/hawaii.jpg") -630.5px 0px;
+}
+.square5 {
+  background: url("./../../images/hawaii.jpg") 0 -129px;
+}
+.square6 {
+  background: url("./../../images/hawaii.jpg") -210.5px -129px;
+}
+.square7 {
+  background: url("./../../images/hawaii.jpg") -421px -129px;
+}
+.square8 {
+  background: url("./../../images/hawaii.jpg") -630.5px -129px;
+}
+.square9 {
+  background: url("./../../images/hawaii.jpg") 0 -258px;
+}
+.square10 {
+  background: url("./../../images/hawaii.jpg") -210.5px -258px;
+}
+.square11 {
+  background: url("./../../images/hawaii.jpg") -421px -258px;
+}
+.square12 {
+  background: url("./../../images/hawaii.jpg") -630.5px -258px;
+}
+.square13 {
+  background: url("./../../images/hawaii.jpg") 0 -387px;
+}
+.square14 {
+  background: url("./../../images/hawaii.jpg") -210.5px -387px;
+}
+.square15 {
+  background: url("./../../images/hawaii.jpg") -421px -387px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
 
-
-
-
-
-
-
+  top: 45px;
+  right: -10px;
+  background-color: #bab9bc;
+  min-width: 350px;
+  height: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#numbers {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+div[class^="square"]:hover:not(.square-blank) {
+  background-color: #526889;
+  transition: all 0.5s ease;
+}

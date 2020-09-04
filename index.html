@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./dist/main.css">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/1a07c677c0.js" crossorigin="anonymous"></script>
-  <meta property= "og:title" content="Sliding PUzzle">
-  <meta property= "og:type" content="website">
-  <meta property= "og:description" content="Sliding puzzle is a classic 15 puzzle game. You slide the pieces by clicking on the piece you want to
-                move. You win once all the pieces are in order">
-  <meta property= "og:url" content="https://louisvelz.github.io/JS-project/">
-  <meta property= "og:image" content="https://louisvelz.github.io/JS-project/dist/images/slidingPuzzle.gif">
-  <title>Sliding Puzzle</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1a07c677c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta property="og:title" content="Sliding PUzzle" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Sliding puzzle is a classic 15 puzzle game. You slide the pieces by clicking on the piece you want to
+                move. You win once all the pieces are in order"
+    />
+    <meta property="og:url" content="https://louisvelz.github.io/JS-project/" />
+    <meta
+      property="og:image"
+      content="https://louisvelz.github.io/JS-project/dist/images/slidingPuzzle.gif"
+    />
+    <title>Sliding Puzzle</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="https://github.com/LouisVelz"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/louis-velazquez-bb63085a/"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://angel.co/u/louis-velazquez"
+        ><i class="fab fa-angellist"></i
+      ></a>
+      <audio
+        id="myTune"
+        src="song.mp3"
+        type="audio/mpeg"
+        loop="loop"
+        volume="0.5"
+      ></audio
+      ><i class="fas fa-play" id="playPause"></i>
+      <div class="dropdown">
+        <i id="instructions" class="fas fa-info"></i>
+        <div class="dropdown-content">
+          To solve the puzzle and win the game, you must arrange the pieces in
+          numerical order or in such form that they put the picture together. </br>
+          Click the Show/Hide button to show or hide numerial values.</br> Click the
+          Shuffle button to suffle the puzzle and click the play button to
+          listen to some tunes "Enjoy"
+        </div>
+      </div>
+    </nav>
 
-  <nav class="navbar">
-    <a href="https://github.com/LouisVelz"><i class="fab fa-github" ></i></a>
-    <a href="https://www.linkedin.com/in/louis-velazquez-bb63085a/"><i class="fab fa-linkedin"></i></a>
-    <audio id="myTune" src="song.mp3" type="audio/mpeg" loop="loop" volume="0.5">
-    </audio><i class="fas fa-play" id='playPause'></i>
-  </nav>
+    <h1>Sliding Puzzle</h1>
 
-  <h1>Sliding Puzzle</h1>
-
-
-  <div class="puzzle">
-    <div class="square1">1</div>
-    <div class="square2">2</div>
-    <div class="square3">3</div>
-    <div class="square4">4</div>
-    <div class="square5">5</div>
-    <div class="square6">6</div>
-    <div class="square7">7</div>
-    <div class="square8">8</div>
-    <div class="square9">9</div>
-    <div class="square10">10</div>
-    <div class="square11">11</div>
-    <div class="square12">12</div>
-    <div class="square13">13</div>
-    <div class="square14">14</div>
-    <div class="square15">15</div>
-    <div class="square-blank">16</div>
-  </div>
-
-  <div class="footer-container">
-    <button id="shuffle-btn">Shuffle Puzzle</button>
-    <div class="footer-timer">
-      <div id="timer-counter">0</div>
-      <div>Timer</div>
+    <div class="puzzle">
+      <div class="square1">1</div>
+      <div class="square2">2</div>
+      <div class="square3">3</div>
+      <div class="square4">4</div>
+      <div class="square5">5</div>
+      <div class="square6">6</div>
+      <div class="square7">7</div>
+      <div class="square8">8</div>
+      <div class="square9">9</div>
+      <div class="square10">10</div>
+      <div class="square11">11</div>
+      <div class="square12">12</div>
+      <div class="square13">13</div>
+      <div class="square14">14</div>
+      <div class="square15">15</div>
+      <div class="square-blank">16</div>
     </div>
-    <div class="footer-moves">
-      <div id= 'moves-counter'>0</div>
-      <div>moves</div>
-    </div>
-  </div>
-  
-  <div class="modal">
-    
-    
-    <div class="modal-container">
 
-      <h2>Congratulations You Won!!!</h2>
-      <h2>Click Shuffle Puzzle to play again!!!</h2>
-      <span class="modal-close js-modal-close">&times;</span>
-
+    <div class="footer-container">
+      <button id="numbers">Show/Hide Numbers</button>
+      <button id="shuffle-btn">Shuffle Puzzle</button>
+      <div class="footer-timer">
+        <div id="timer-counter">0</div>
+        <div>Timer</div>
+      </div>
+      <div class="footer-moves">
+        <div id="moves-counter">0</div>
+        <div>moves</div>
+      </div>
     </div>
 
-    <div class="modal-screen js-modal-close"></div>
-  </div>
-  
-  <script type="text/javascript" src="./dist/main.js"></script>
-</body>
+    <div class="modal">
+      <div class="modal-container">
+        <h2>Congratulations You Won!!!</h2>
+        <h2>Click Shuffle Puzzle to play again!!!</h2>
+        <span class="modal-close js-modal-close">&times;</span>
+      </div>
+
+      <div class="modal-screen js-modal-close"></div>
+    </div>
+
+    <script type="text/javascript" src="./dist/main.js"></script>
+  </body>
 </html>
